@@ -154,7 +154,7 @@ jobs:
       - name: Extract Docker metadata
         if: steps.check_docker.outputs.has_docker == 'true'
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
@@ -186,7 +186,7 @@ jobs:
         if: steps.check_docker.outputs.has_docker == 'true'
         continue-on-error: true
         id: dockerhub_meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: xuxuclassmate/trading-assistant
           tags: |

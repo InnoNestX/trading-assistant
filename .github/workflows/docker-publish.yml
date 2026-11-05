@@ -20,7 +20,7 @@ jobs:
     
     steps:
       - name: Checkout / 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       
       - name: Get version / 获取版本号
         id: version

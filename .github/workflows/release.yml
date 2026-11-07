@@ -164,7 +164,7 @@ jobs:
 
       - name: Build and push Docker image to GHCR
         if: steps.check_docker.outputs.has_docker == 'true'
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
@@ -198,7 +198,7 @@ jobs:
       - name: Build and push Docker image to Docker Hub
         if: steps.check_docker.outputs.has_docker == 'true'
         continue-on-error: true
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
